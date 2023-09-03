@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --bgPrimary: #252937;
+    --textPrimary: white;
+    --textSecondary: #020100;
+    --actionSecondary: #FFBA08;
+    --destaque: #136F63;
+    --destaqueTranslucide: #136f6359;
+
+
+    --paddingDefault: 2rem;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    /* background-color: var(--bgPrimary); */
+    padding: var(--paddingDefault);
+
+    background: #091B20;
+    background: conic-gradient(from 180deg, #091B20, #0C2027);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 0.08fr;
+
+    gap: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    color: var(--textPrimary);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+header span {
+    color: #2a2aac;
+}
+
+
+main {
+    width: 100%;
+    height: fit-content;
+
+    color: var(--textPrimary);
+
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  
+}
+
+.card {
+    flex-grow: 1;
+    width: fit-content;
+    height: fit-content;
+    
+    border: 2px solid var(--destaqueTranslucide);
+    border-radius: 15px;
+    padding: 2rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    background-color: #0000003b;
+    backdrop-filter: blur(10px);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card h3 {
+    font-weight: 100;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 2px;
+
+    font-size: medium;
+}
+
+.card button {
+    width: 60%;
+    margin: 0.5rem auto;
+
+    background-color: var(--actionSecondary);
+    color: var(--textSecondary);
+
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 2px;
+    font-size: medium;
+
+    border: none;
+    outline: none;
+
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.card button:hover {
+    box-shadow: 0 0 10px var(--actionSecondary);
+    color: var(--textPrimary);
+}
+
+.card:has(button:hover){
+    box-shadow: 0 0 20px 2px var(--destaque);
+    border: 2px solid var(--destaque);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--textPrimary);
+}
