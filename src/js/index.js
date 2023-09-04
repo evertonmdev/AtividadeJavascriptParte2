@@ -146,9 +146,6 @@ const PesoIdeal = () => {
     alert("O peso ideal não existe, se aceite <3")
     alert(`Mas a saúde existe ( risada malefica ), o teu peso ideal seria ${pesoIdeal}`)
 
-    if((anoAtual - anoNasc) >= 18 ) alert("Párabens você pode votar ^-^")
-    else alert("Lamento você não pode votar T-T")
- 
 }
 
 const Calculadora = () => { 
